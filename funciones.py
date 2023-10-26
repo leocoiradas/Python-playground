@@ -21,7 +21,7 @@ area(34)'''
 
 ##Función para verificar el número mayor, recibe 2 números como parámetro y devuelve el mayor
 
-def bigger(numOne, numTwo):
+'''def bigger(numOne, numTwo):
     if numOne > numTwo:
         print(f"{numOne} is bigger than {numTwo}") 
     else:
@@ -30,4 +30,20 @@ def bigger(numOne, numTwo):
 bigger(48, 567)
 bigger(32, 25)
 bigger(583939, 9)
-bigger(12, 74)
+bigger(12, 74)'''
+
+##Factorial: Crear una función que tome un valor positivo como parámetro y calcule su factorial
+
+def factor(number):
+    if number > 0:
+        total = 1
+        numRange = range(1, number+1)
+        for i in numRange:
+            total*=i
+        print(f"El factorial de {number} es {total}")
+        
+factor(14)
+factor(5)
+factor(10)
+factor(4)
+factor(21)
