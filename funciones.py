@@ -91,7 +91,7 @@ promedio([2, 5, 7, 8, 9, 76, 43, 12, 6, 1])'''
 
 ##Contar vocales, crear una función que reciba un string como parámetro y permita saber cuantas vocales tiene la cadena ingresada
 
-def contar_vocales(string):
+'''def contar_vocales(string):
     vocalCount = 0
     lowerString = string.lower()
     for char in lowerString:
@@ -101,5 +101,27 @@ def contar_vocales(string):
     
 contar_vocales("Superman")
 contar_vocales("Superman ha salvado Metropolis")
-contar_vocales("Madrid es una ciudad ubicada en España")
+contar_vocales("Madrid es una ciudad ubicada en España")'''
+
+#Día de la semana: Crear una función que reciba un número del 1 al 7, y que devuelva un mensaje con el día de la semana correspondiente al número ingresado
+
+def diaSemana(num):
+    dias = ["Domingo","Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sabado"]
+    hoy = ""
+    if num >=1 and num <=7:
+        diasLong = len(dias)
+        rango = range(1, diasLong + 1)
+        for numero in rango:
+            if numero == num:
+                hoy = dias[numero - 1]
+    else:
+        print("Por favor ingrese un número entero entre 1 y 7 para ejecutar el programa")
+        return hoy
     
+    print(f"Hoy es {hoy}")
+    return hoy
+
+diaSemana(6)
+diaSemana(5)
+diaSemana(3)
+diaSemana(1)
