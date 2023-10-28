@@ -66,12 +66,26 @@ es_primo(44)'''
 
 ##Revertir cadena: crear una función la cual permita invertir una cadena ingresada
 
-def revertirCadena(string):
+'''def revertirCadena(string):
     reversedString = ""
     for char in reversed(string):
         reversedString += char
     print(reversedString)
     return reversedString
 
-revertirCadena("Supercalifrigalisticexpialidoucious")
+revertirCadena("Supercalifrigalisticexpialidoucious")'''
+
+##Promedio de una lista: Crear una función que permita calcular el promedio de una lista de números
+
+def promedio(arr):
+    arrLength = len(arr)
+    sumArr = 0
+    for num in arr:
+        sumArr += num
+    prom = sumArr / arrLength
+    prom = round(prom, 2)
+    print(f"la suma de los elementos de {arr} es {sumArr} y su promedio es: {prom}")
+    return prom
+
+promedio([2, 5, 7, 8, 9, 76, 43, 12, 6, 1])
     
