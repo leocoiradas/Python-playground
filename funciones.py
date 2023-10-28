@@ -50,7 +50,7 @@ factor(21)'''
 
 ##Números primos: Crear una funcion que permita saber si un número primo o no
 
-def es_primo(num):
+'''def es_primo(num):
     for n in range(2, num):
         if num % n == 0:
             print(f"{num} no es un número primo", n, "es divisor")
@@ -62,4 +62,16 @@ es_primo(78)
 es_primo(77)
 es_primo(97)
 es_primo(100)
-es_primo(44)
+es_primo(44)'''
+
+##Revertir cadena: crear una función la cual permita invertir una cadena ingresada
+
+def revertirCadena(string):
+    reversedString = ""
+    for char in reversed(string):
+        reversedString += char
+    print(reversedString)
+    return reversedString
+
+revertirCadena("Supercalifrigalisticexpialidoucious")
+    
