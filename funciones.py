@@ -105,7 +105,7 @@ contar_vocales("Madrid es una ciudad ubicada en España")'''
 
 #Día de la semana: Crear una función que reciba un número del 1 al 7, y que devuelva un mensaje con el día de la semana correspondiente al número ingresado
 
-def diaSemana(num):
+'''def diaSemana(num):
     dias = ["Domingo","Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sabado"]
     hoy = ""
     if num >=1 and num <=7:
@@ -124,4 +124,16 @@ def diaSemana(num):
 diaSemana(6)
 diaSemana(5)
 diaSemana(3)
-diaSemana(1)
+diaSemana(1)'''
+
+##Máximo y mínimo: Crear una función que permita calcular los elementos máximo y mínimo de una lista de números
+
+def maxAndMin(list):
+    minValue = min(list)
+    maxValue= max(list)
+    print(f"El valor máximo de la lista {list} es {maxValue} y el valor mínimo es {minValue}")
+    return [minValue, maxValue]
+    
+maxAndMin([9, 49, 21, 345, 5, 5, 67, 12, 15])
+maxAndMin([3, 4, 5, 6])
+maxAndMin([12, 27, 89])
