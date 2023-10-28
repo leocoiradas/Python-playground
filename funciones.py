@@ -77,7 +77,7 @@ revertirCadena("Supercalifrigalisticexpialidoucious")'''
 
 ##Promedio de una lista: Crear una función que permita calcular el promedio de una lista de números
 
-def promedio(arr):
+'''def promedio(arr):
     arrLength = len(arr)
     sumArr = 0
     for num in arr:
@@ -87,5 +87,19 @@ def promedio(arr):
     print(f"la suma de los elementos de {arr} es {sumArr} y su promedio es: {prom}")
     return prom
 
-promedio([2, 5, 7, 8, 9, 76, 43, 12, 6, 1])
+promedio([2, 5, 7, 8, 9, 76, 43, 12, 6, 1])'''
+
+##Contar vocales, crear una función que reciba un string como parámetro y permita saber cuantas vocales tiene la cadena ingresada
+
+def contar_vocales(string):
+    vocalCount = 0
+    lowerString = string.lower()
+    for char in lowerString:
+        if char == "a" or char == "e" or char == "i" or char == "o" or char =="u":
+            vocalCount+=1
+    print(f"La cadena {string} tiene en total {vocalCount} vocales")
+    
+contar_vocales("Superman")
+contar_vocales("Superman ha salvado Metropolis")
+contar_vocales("Madrid es una ciudad ubicada en España")
     
