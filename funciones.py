@@ -34,7 +34,7 @@ bigger(12, 74)'''
 
 ##Factorial: Crear una función que tome un valor positivo como parámetro y calcule su factorial
 
-def factor(number):
+'''def factor(number):
     if number > 0:
         total = 1
         numRange = range(1, number+1)
@@ -46,4 +46,20 @@ factor(14)
 factor(5)
 factor(10)
 factor(4)
-factor(21)
+factor(21)'''
+
+##Números primos: Crear una funcion que permita saber si un número primo o no
+
+def es_primo(num):
+    for n in range(2, num):
+        if num % n == 0:
+            print(f"{num} no es un número primo", n, "es divisor")
+            return False
+    print(f"{num} es un número primo")
+    return True
+
+es_primo(78)
+es_primo(77)
+es_primo(97)
+es_primo(100)
+es_primo(44)
