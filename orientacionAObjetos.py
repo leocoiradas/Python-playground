@@ -66,7 +66,7 @@ harryPotter.libro_genero()    '''
 
 ##Crear una clase empleado que herede de la clase persona. Agregar atributos específicos de empleado, como salario y cargo
     
-class Persona:
+'''class Persona:
     def __init__(self, nombre, edad, genero):
         self.nombre = nombre
         self.edad = edad
@@ -91,4 +91,36 @@ luciano = Empleado("Luciano", 34, "Masculino", 30000, "Arquitecto")
 luciano.genero_valor()
 luciano.edad_valor()
 luciano.salario_valor()
-luciano.cargo_valor()
+luciano.cargo_valor()'''
+
+##Crear una clase llamada vehiculo (copiar clase de ejercicio 2) y crear clases como motocicleta que hereden los atributos de esa clase
+
+class Vehiculo: 
+    def __init__(self, marca, modelo, anio):
+        self.marca = marca
+        self.modelo = modelo
+        self.anio = anio
+    def coche_marca(self):
+        print(f"La marca del auto es {self.marca}")
+    def coche_modelo(self):
+        print(f"El modelo del auto es {self.modelo}")
+    def coche_anio(self):
+        print(f"El año de este coche es {self.anio}")
+        
+class Motocicleta(Vehiculo):
+    def __init__(self, marca, modelo, anio):
+        super().__init__(marca, modelo, anio)
+        
+class Coche(Vehiculo):
+    def __init__(self, marca, modelo, anio):
+        super().__init__(marca, modelo, anio)
+        
+gilera = Motocicleta("Gilera", "moto", 2018)
+gilera.coche_marca()
+gilera.coche_modelo()
+gilera.coche_anio()
+
+renault = Coche("Renault", "Duster Oroch", 2019)
+renault.coche_marca()
+renault.coche_modelo()
+renault.coche_anio()
