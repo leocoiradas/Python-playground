@@ -1,3 +1,5 @@
+import math
+
 #Clases y objetos
 
 
@@ -95,7 +97,7 @@ luciano.cargo_valor()'''
 
 ##Crear una clase llamada vehiculo (copiar clase de ejercicio 2) y crear clases como motocicleta que hereden los atributos de esa clase
 
-class Vehiculo: 
+'''class Vehiculo: 
     def __init__(self, marca, modelo, anio):
         self.marca = marca
         self.modelo = modelo
@@ -123,4 +125,61 @@ gilera.coche_anio()
 renault = Coche("Renault", "Duster Oroch", 2019)
 renault.coche_marca()
 renault.coche_modelo()
-renault.coche_anio()
+renault.coche_anio()'''
+
+#Herencia múltiple
+
+##Crear una clase animal con métodos como moverse y comer. Luego, crea clases derivadas para diferentes tipos de animales, como Perro y Pájaro, que hereden de Animal y de otras clases específicas, como Mamífero y Ave
+
+
+
+#Polimorfismo
+
+##Polimorfismo en figuras geometricas: Define una clase base FiguraGeometrica con métodos como calcular_area. Luego, crea clases derivadas para diferentes figuras geométricas, como Círculo y Rectángulo, que implementen sus propias versiones del método calcular_area.
+
+class FiguraGeometrica:
+    def __init__(self, figura, base):
+        self.figura = figura
+        self.base = base
+        self.area = 0
+    def calcular_area(self):
+        self.area = math.sqrt(self.long, 2)
+        print(f"El área del {self.figura} es: {self.area}")
+        
+class Cuadrado(FiguraGeometrica):
+    def __init__(self, figura, long):
+        super().__init__(figura, long)
+        
+class Rectangulo(FiguraGeometrica):
+    def __init__(self, figura, base, altura):
+        super().__init__(figura, base)
+        self.altura = altura
+    def calcular_area(self):
+        self.area = self.base * self.altura
+        print(f"El área del {self.figura} es: {self.area}")
+        
+class Triangulo(FiguraGeometrica):
+    def __init__(self, figura, base, altura):
+        super().__init__(figura, base)
+        self.altura = altura
+    def calcular_area(self):
+        self.area = (self.base * self.altura)/2
+        print(f"El área del {self.figura} es: {self.area}")
+        
+class Circulo(FiguraGeometrica):
+    def __init__(self, figura, radio):
+        super().__init__(figura, radio)
+        self.radio = radio
+    def calcular_area(self):
+        self.area = math.pi * math.pow(self.radio, 2)
+        print(f"El área del {self.figura} es: {self.area}")
+        
+rectangulo = Rectangulo("Rectangulo", 5, 7)
+rectangulo.calcular_area()
+        
+triangulo = Triangulo("Triangulo", 10, 8)
+triangulo.calcular_area()
+
+circulo = Circulo("Círculo", 15)
+circulo.calcular_area()
+        
