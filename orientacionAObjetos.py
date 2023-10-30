@@ -137,7 +137,7 @@ renault.coche_anio()'''
 
 ##Polimorfismo en figuras geometricas: Define una clase base FiguraGeometrica con métodos como calcular_area. Luego, crea clases derivadas para diferentes figuras geométricas, como Círculo y Rectángulo, que implementen sus propias versiones del método calcular_area.
 
-class FiguraGeometrica:
+'''class FiguraGeometrica:
     def __init__(self, figura, base):
         self.figura = figura
         self.base = base
@@ -181,5 +181,32 @@ triangulo = Triangulo("Triangulo", 10, 8)
 triangulo.calcular_area()
 
 circulo = Circulo("Círculo", 15)
-circulo.calcular_area()
+circulo.calcular_area()'''
+
+##Animales: Crear una clase Animal con un método hacer_sonido y crear distintas clases que hereden y modifiquen dicho método
+
+class Animal:
+    def __init__(self):
+        pass
+    def hacer_sonido(self):
+        print(f"Soy un animal y hago sonidos!!")
+
+class Gato(Animal):
+    def __init__(self):
+        super().__init__()
+    def hacer_sonido(self):
+        print(f"Soy un gato y hago miau!!")
+
+class Perro(Animal):
+    def __init__(self):
+        super().__init__()
+    def hacer_sonido(self):
+        print(f"Soy un perro y hago guau guau!!")
+        
+caniche = Perro()
+caniche.hacer_sonido()
+
+gatoSiames = Gato()
+gatoSiames.hacer_sonido()
+    
         
