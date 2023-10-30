@@ -44,7 +44,7 @@ ferrari.coche_modelo()
 ferrari.coche_marca()'''
 
 ##Clase libro: Crear una clase libro con atributos como titulo, autor y genero. Crear objetos en base a dicha clase
-
+'''
 class Libro:
     def __init__(self, titulo, autor, genero):
         self.titulo = titulo
@@ -60,5 +60,35 @@ class Libro:
 harryPotter = Libro("Harry Potter", "J.K Rowling", "Fantasía")
 harryPotter.libro_titulo()
 harryPotter.libro_autor()
-harryPotter.libro_genero()        
+harryPotter.libro_genero()    '''    
+
+##Herencia de clases
+
+##Crear una clase empleado que herede de la clase persona. Agregar atributos específicos de empleado, como salario y cargo
     
+class Persona:
+    def __init__(self, nombre, edad, genero):
+        self.nombre = nombre
+        self.edad = edad
+        self.genero = genero
+        print(f"Hola!! Mi nombre es {self.nombre}")
+    def edad_valor(self):
+        print(f"Tengo {self.edad} años")
+    def genero_valor(self):
+        print(f"Mi género es {self.genero}")
+        
+class Empleado(Persona):
+    def __init__(self, nombre, edad, genero, salario, cargo):
+        self.salario = salario
+        self.cargo = cargo
+        super().__init__(nombre, edad, genero) 
+    def salario_valor(self):
+        print(f"Mi salario es de: {self.salario}")
+    def cargo_valor(self):
+        print(f"Mi cargo es el de: {self.cargo}")
+        
+luciano = Empleado("Luciano", 34, "Masculino", 30000, "Arquitecto")
+luciano.genero_valor()
+luciano.edad_valor()
+luciano.salario_valor()
+luciano.cargo_valor()
