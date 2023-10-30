@@ -26,7 +26,7 @@ personaTwo.genero("Femenino")'''
 
 ##Clase coche: Crear clase coche con atributos y metodos como marca modelo y año. Crear objetos instanciando dicha clase
 
-class Coche:
+'''class Coche:
     def __init__(self, marca, modelo, anio):
         self.marca = marca
         self.modelo = modelo
@@ -41,5 +41,24 @@ class Coche:
 ferrari = Coche("Ferrari", "Deportivo", "2023")
 ferrari.coche_anio()
 ferrari.coche_modelo()
-ferrari.coche_marca()
+ferrari.coche_marca()'''
+
+##Clase libro: Crear una clase libro con atributos como titulo, autor y genero. Crear objetos en base a dicha clase
+
+class Libro:
+    def __init__(self, titulo, autor, genero):
+        self.titulo = titulo
+        self.autor = autor
+        self.genero = genero
+    def libro_titulo(self):
+        print(f"El título de este libro es: {self.titulo}")
+    def libro_autor(self):
+        print(f"El autor de este libro es: {self.autor}")
+    def libro_genero(self):
+        print(f"El género de este libro es: {self.genero}")
+
+harryPotter = Libro("Harry Potter", "J.K Rowling", "Fantasía")
+harryPotter.libro_titulo()
+harryPotter.libro_autor()
+harryPotter.libro_genero()        
     
